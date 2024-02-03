@@ -133,7 +133,7 @@ width: 100%;
   background-color: #b600ee54;
   border-radius: 15px;
   position: relative;
-  height: 500px;
+  height: 350px;
   line-height: 0.9; 
   width: 100%;
 
@@ -620,7 +620,7 @@ margin-top: 160px;
 
 @media screen and (max-width:800px) {
   .hero-banner-container{
-    height: 560px;
+    height: 350px;
   }
   .hero-banner-image{
     width: 77%;
@@ -629,8 +629,8 @@ margin-top: 160px;
     right: -6%;
   }
   .footer-banner-container{
-    height: 560px;
-    margin-top: 80px;
+    height: 360px;
+    margin-top: 30px;
   }
   .footer-banner-image{
     width: 77%;
