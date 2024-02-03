@@ -64,9 +64,9 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <h4>Details: </h4>
           <p>{details}</p>
-          <p className="price">₸{price}</p>
+          <p className="price">Оптом: ₸{price}</p>
           <div className="quantity">
-            <h3>Количество:</h3>
+            <h3>Количество упаковок:</h3>
             <p className="quantity-desc">
               <span className="minus" onClick={decQty}><AiOutlineMinus /></span>
               <span className="num">{qty}</span>
