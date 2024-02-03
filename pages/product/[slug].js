@@ -62,8 +62,8 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)} disabled={!isProductInStock}>Add to Cart</button>
-            <button type="button" className="buy-now" onClick={handleBuyNow} disabled={!isProductInStock}>Buy Now</button>
+            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)} disabled={!isProductInStock}>Добавить в корзину</button>
+            <button type="button" className="buy-now" onClick={handleBuyNow} disabled={!isProductInStock}>Купить сейчас</button>
           </div>
         </div>
       </div>
