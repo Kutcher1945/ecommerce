@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar, AiFillPhone } from 'react-icons/ai';
 
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
@@ -15,7 +15,19 @@ const ProductDetails = ({ product, products }) => {
     onAdd(product, qty);
 
     setShowCart(true);
-  }
+  };
+
+  // Function to open a WhatsApp chat with the provided number
+  const openWhatsAppChat = () => {
+    const phoneNumber = '+77014840884';
+    const message = `Здравствуйте, у меня есть вопрос по товару: ${name}`;
+
+    // Construct the WhatsApp link
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open the WhatsApp chat in a new tab
+    window.open(whatsappLink);
+  };
 
   return (
     <div>
@@ -63,20 +75,25 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <div className="buttons">
             <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)} disabled={!isProductInStock}>Добавить в корзину</button>
-            <button type="button" className="buy-now" onClick={handleBuyNow} disabled={!isProductInStock}>Купить сейчас</button>
+            <button type="button" className="buy-now" onClick={openWhatsAppChat}>
+              Купить сейчас
+              <a href="#" onClick={openWhatsAppChat} className="whatsapp-icon">
+                <AiFillPhone />
+              </a>
+            </button>
           </div>
         </div>
       </div>
 
       <div className="maylike-products-wrapper">
-          <h2>Вам может понравиться</h2>
-          <div className="marquee">
-            <div className="maylike-products-container track">
-              {products.map((item) => (
-                <Product key={item._id} product={item} />
-              ))}
-            </div>
+        <h2>Вам может понравиться</h2>
+        <div className="marquee">
+          <div className="maylike-products-container track">
+            {products.map((item) => (
+              <Product key={item._id} product={item} />
+            ))}
           </div>
+        </div>
       </div>
     </div>
   )
