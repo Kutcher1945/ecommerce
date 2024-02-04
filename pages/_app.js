@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'колготки, чулки, белье, мода', // Add keywords relevant to your store
+            content: 'колготки, чулки, белье, мода, женские колготки, колготки черного цвета, плотные колготки, колготки с рисунком, колготки, колготки Алматы' // Add keywords relevant to your store
           },
         ]}
         
