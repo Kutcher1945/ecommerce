@@ -4,6 +4,7 @@ import { DefaultSeo } from 'next-seo';
 import { Layout } from '../components';
 import '../styles/globals.css';
 import { StateContext } from '../context/StateContext';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -40,11 +41,15 @@ function MyApp({ Component, pageProps }) {
             content: 'колготки, чулки, белье, мода', // Add keywords relevant to your store
           },
         ]}
+        
       />
       <Layout>
         <Toaster />
         <Component {...pageProps} />
       </Layout>
+      <Head>
+        <link rel="canonical" href="https://ecommerce-nine-brown.vercel.app/" />
+      </Head>
     </StateContext>
   );
 }
